@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+
+<struts-config>
+
+
+  <form-beans>
+<form-bean name="lform" type="demostruts.LoginForm"/>
+<form-bean name="uform" type="demostruts.UserLoginForm"/>
+</form-beans>
+
+    
+    
+    <action-mappings>
+    
+    
+    <action path="/hello" type="demostruts.LoginAction" name="lform">
+		
+		<forward name="success" path="/s.jsp" />
+
+		<forward name="failure" path="/f.jsp" />
+
+	</action>
+  <action path="/test" type="demostruts.UserLoginAction" name="uform">
+		
+		<forward name="success" path="/s.jsp" />
+
+		<forward name="failure" path="/f.jsp" />
+
+	   </action>
+
+  
+
+    </action-mappings>
+    
+     
+</struts-config>
+
